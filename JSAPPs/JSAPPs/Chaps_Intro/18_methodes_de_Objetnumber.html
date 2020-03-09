@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Les methodes de l'objet number</h1>
+
+	<script>
+	   /*
+		var min = Number.MIN_VALUE;
+		var max = Number.MAX_VALUE;
+		var infneg = Number.NEGATIVE_INFINITY;
+		var infpos = Number.POSITIVE_INFINITY;
+		var notnumber = Number.NaN;
+
+		alert('Min :' + min +
+			'\nMax : ' + max +
+			'\nInfini Negatif : ' + infneg +
+			'\nInfini positif : ' +infpos +
+			'\nPas un nombre :' + notnumber);
+		*/
+
+		//***toString()   ---> convertit un number en string
+		/*
+		var x = 10;
+		var t = x.toString();
+		alert('Type x :' + typeof(x) +
+			'\nType t :' + typeof (t));
+		*/
+
+		//***toFixed()   ---> fixe le nombre de decimal d'un number et change le type en string
+		/*
+		var x = 10.4531;
+		var d = x.toFixed(2);
+		alert('Valeur de d : ' + d +
+			'\nType de d : ' + typeof (d));
+
+		*/
+		//***toPrecision()  ----> effectue un arrondi
+		/*
+		var x = 10.4531;
+		var d = x.toPrecision(3);
+		alert('Valeur de d : ' + d +
+			'\nType de d : ' + typeof (d)); 
+		*/
+
+		//***toExponential()  ----> mettre un nombre sous forme de puissance de 10
+		/*
+		var x = 10.4531;
+		var d = x.toExponential(2);
+		alert('Valeur de d : ' + d +
+			'\nType de d : ' + typeof (d)); 
+		*/
+
+		// Number() ---> transforme les boolean en nombre 1 -->true   0 ---> false et transforme les dates en nombre
+		/*
+		var t = true;
+		var f = false;
+		var d = new Date();
+
+		alert('True :' + Number(t) +
+			'\nFalse : ' + Number(f) +
+			'\nDate : ' + Number(d));
+
+
+		*/
+
+		// parseInt() ---> retourne un entier    parseFloat() ---> retourne un entier ou un decimal   à partir d'une chaine de caractere.
+
+		var x = "10.4531"
+		var y = "abc";
+
+		var int = parseInt(x);    // 10
+		var dec = parseFloat(x);   //10.4531
+
+		var inty = parseInt(y);   // NaN
+		var decy = parseFloat(y);  // NaN
+
+		alert('parseInt() :' + int + ' - ' + typeof(int) +
+			'\nparseFloat() : ' + dec + ' - ' + typeof (dec));
+
+		alert('parseInt() :' + inty + ' - ' + typeof(inty) +
+			'\nparseFloat() : ' + decy +  ' - ' + typeof(decy));
+
+	</script>
+</body>
+</html>

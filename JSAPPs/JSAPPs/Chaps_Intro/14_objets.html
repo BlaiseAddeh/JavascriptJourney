@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Les objets en Javascript</h1>
+
+
+
+	<script>
+	    //***************
+		var primitive = "Je suis une valeur primitive";
+		var moi = {
+			prenom: "Pierre",
+			nom: "Giraud",
+			age: 25,
+
+			identite: function () {
+				return 'Prenom :' + this.prenom +
+					'\nNom : ' + this.nom +
+					'\nAge : ' + this.age;
+			}
+		};
+
+		alert(moi.identite());
+
+	</script>
+
+</body>
+</html>

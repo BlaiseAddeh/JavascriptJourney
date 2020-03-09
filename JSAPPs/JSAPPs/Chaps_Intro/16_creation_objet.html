@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Creation des objets en Javascript</h1>
+
+	<script>
+	   //***********METHODES DE CREATION DES OBJETS
+	   //****** (DECONSEILLE)
+
+	   /*
+		var obj_string = new String("Je suis un objet");
+		var obj_cree = new Object();
+
+		obj_cree.prenom = "Blaise";
+		obj_cree.nom = "Addeh";
+		obj_cree.age = 25;
+		alert(obj_cree.prenom);
+		*/
+
+		//****** (RECOMMANDE)
+
+		/*
+
+		var moi = {
+			prenom : "Blaise",
+			nom :"Addeh",
+			age : 25,
+			id: function () {
+				return this.prenom + ' ' + this.nom;
+			}
+		}
+		alert(moi.id());
+
+		*/
+
+		//****** CREATION D'OBJET A PARTIR DE CONTRUCTEUR (RECOMMANDE)
+
+		/*
+		function Identite(p, n, a) {   // fonction constructeur
+			this.prenom = p;
+			this.nom = n;
+			this.age = a;
+		}
+
+		var personne1 = new Identite("Pierre", "Geraud", 25);
+		var personne2 = new Identite("Blaise", "Addeh", 38);
+
+		alert("Age de personne1 : " + personne1.age +
+			"\nAge de personne2 : " + personne2.age);
+
+		*/
+
+
+		//******** Avec les valeurs primitives, on peut faire des copies de valeurs
+		/*
+		var x = 10;
+		var y = x;
+		y += 10;
+
+		alert("Valeur de x : " + x +
+			"\nValeur de y : " + y);
+
+		*/
+
+		//******** Avec des objet, on procede par reference
+
+		function Identite(p, n, a) {   // fonction constructeur
+			this.prenom = p;
+			this.nom = n;
+			this.age = a;
+		}
+
+		var personne1 = new Identite("Pierre", "Geraud", 25);
+		var personne2 = personne1;
+
+		personne2.prenom = "BENI";
+
+		alert("Prenom de personne1 : " + personne1.prenom +    //BENI
+			"\nPrenom de personne2 : " + personne2.prenom);    //BENI
+
+
+	</script>
+</body>
+</html>

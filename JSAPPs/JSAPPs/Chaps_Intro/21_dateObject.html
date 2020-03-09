@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Presentation de l'objet date</h1>
+
+	<script>
+
+	/* Les mois en Javascript commence par 0 et se termine par 11
+	 * les date peuvent s'ecrire sur 2 formats
+	  * -le format de date litteral et le timestamp*1000
+	   * le timestamp est le nombre de second ecoulé depuis le 01/01/1970 utc
+	    * le le timestamp est en milliseconde
+	 */
+
+	 // Recuperer la date actuell sous forme litteral
+		//var datelit = Date();
+	// Recupérer le nombre de milliseconde ecoulé depuis le 01/01/1970
+		//var datems = Date.now();
+		/*
+		alert('Date litterale : ' + datelit +
+			'\nDate sous forme milliseconde : ' + datems);
+		*/
+
+		// Creation d'un objet de type date
+		//** 1er cas
+		//var d = new Date();   // d contient la date actuelle
+		//** 2eme cas
+		//var d = new Date("March 08, 2020 18:00:00");
+
+		// Dans une semaine, il y a 604800000 seconde dans une semaine
+		/*
+		var d = new Date(0);            // 01/01/1970
+		var d1 = new Date(604800000);   //01/01/1970 + 1 semaine   ==> 08/01/1970
+
+		alert(d + '\n\n' + d1);
+		*/
+
+		// Les parametres de l'objet Date sont annee mois jour heure min second milliseconde
+
+		/*
+		var d1 = new Date(2015, 6, 15, 12, 30, 20, 110);   // Wed Jul 15 2015 12:30:20
+		var d2 = new Date(2015, 6, 15);     //Wed Jul 15 2015 00:00:00 
+		alert("Date 1 : " +d1 +'\n\nDate 2 :' + d2);
+
+		*/
+
+		//** LES FORMATS DE DATE
+		// les formats reconnus sont : le format ISO - le format court - le format long
+		var diso1 = new Date("2020-06-15");
+		var diso2 = new Date("2020-06-15T12:00:00");
+
+		var dcourte = new Date("06/15/2020");
+		var dlongue = new Date("January 25 2015 09:00:00")
+		var dcomp = new Date("Sun Jan 25 2015 09:00:00 GMT+0100")
+
+		alert("Date ISO courte  : " + diso1 +
+			'\n\nDate ISO complete :' + diso2 +
+			'\n\nDate courte :' + dcourte +
+			'\n\nDate longue :' + dlongue +
+			'\n\nDate complete :' + dcomp);
+
+
+	</script>
+</body>
+</html>

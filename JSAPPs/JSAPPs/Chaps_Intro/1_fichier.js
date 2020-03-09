@@ -1,0 +1,1 @@
+﻿alert('Voila le résultat de plusieurs jours de grattage!')

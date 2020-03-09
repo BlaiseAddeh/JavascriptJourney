@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Les methodes de l'objet String</h1>
+	<script>
+
+
+	//*** toLowerCase() et toUpperCase()
+	/*
+		var texte = "J'apprends le JAVASCRIPT";
+		var texteMin = texte.toLowerCase();
+		var texteMaj = texte.toUpperCase();
+
+		alert("Texte de base : " + texte +   
+			"\nTexte en minuscule : " + texteMin +
+			"\nTexte en majuscule : " + texteMaj);
+
+	*/
+
+	//*** charAt()
+
+	  /*
+		var texte = "J'apprends le JAVASCRIPT";
+		var pos0 = texte.charAt(0);   // J
+		var pos3 = texte.charAt(3);    // P
+		var pos11 = texte.charAt(11);   //l
+
+		alert("Position 0 : " + pos0 +   
+			"\nPosition 3 : " + pos3 +
+			"\nPosition 11 : " + pos11);
+        */
+
+		//*** indexOf()  -----> retourne la premiere position à laquelle un caractere a été retrouvé dans une chaine
+		//*** lastIndexOf()-----> retourne la derniere position à laquelle un caractere a été retrouvé dans une chaine
+
+		var texte = "J'apprends le JAVASCRIPT ";
+		/*
+		var eltintrouvable = texte.indexOf('z');
+		var premiere = texte.indexOf('p');
+		var derniere = texte.lastIndexOf('p');
+		var sequence = texte.indexOf('le');
+
+		alert("Premier 'p' trouvé en position : " + premiere +    // 3
+			"\nDernier 'p' trouvé en position : " + derniere +     // 4
+			"\nPremier 'le' trouvé en position : " + sequence +     // 11
+				"\nElt introuvable en position : " + eltintrouvable);   //-1
+		*/
+
+		// Recherche à partir d'une position
+		/*
+		var premiere = texte.indexOf('J', 1);   // rechercher J à partir de la position 1, mais le decompte se fait depuis le début de la chaine.
+		alert("Premier 'J' trouvé en position : " + premiere);   // 14
+
+		*/
+
+		//*** replace() ---> recherche un caractere et le remplace par un autre caractere
+		/*
+		alert(texte.replace("JAVASCRIPT", "PHP"));
+		*/
+
+		//*** slice()  ----> Extrait une sequence d'une chaine de caractere et retourne la sequence extraite
+		/*
+		var result = texte.slice(2, 7);   // appre   //7 represente la longeur. on commence par compter les longueur à partir de 1
+		var result2 = texte.slice(0, 10);   // J'apprends
+
+		var resultat3 = texte.slice(-11, -1); //Le decomte se fait à l'envers
+
+		alert(resultat3);
+		*/
+
+		//***trim() ---> supprime les données en début et fin de chaine
+
+		var texte2 = "      Mot texte avec espace    "
+		var texte2Nettoye = texte2.trim();
+
+		alert("Texte avant nettoyage : " + texte2 +   
+			"\nTexte apres nettoyage :  " + texte2Nettoye); 
+
+
+	</script>
+</body>
+</html>

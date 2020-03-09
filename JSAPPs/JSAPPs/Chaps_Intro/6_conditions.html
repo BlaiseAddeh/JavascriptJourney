@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1> Les conditions</h1>
+
+
+	<script>
+	   /*
+	    Les operateurs de comparaison sont les suivants:
+		==  Est egal à (en valeur)
+		!=  Est différent de (en valeur)
+		=== Est egal à (en valeur et en type)
+		!== Est different de (en valeur et en type)
+		<   Est strictement inférieur à
+		<=   Est inférieur ou égal à
+		>   Est strictement superieur à
+		>=   Est superieur ou égal à
+	   */
+
+
+		var x = 7, y = 14;
+		var vrai = x < y;     // true
+		var faux = 14 <= 7;   // faux
+
+		var egalval = 4 == "4";    // true
+		var egaltype = 4 === "4";   // false
+		var difval = 4 != "4";      // false
+		var difvaltype = 4 !== "4"  // true;
+
+		alert("vrai stocke : " + vrai +
+			"\nfaux stocke: " + faux +
+			"\negalval stocke : " + egalval +
+			"\negaltype stocke: " + egaltype +
+			"\ndifval stocke: " + difval +
+			"\ndifvaltype stocke: " + difvaltype);
+
+
+	</script>
+</body>
+</html>

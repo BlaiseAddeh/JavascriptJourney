@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Les opérateurs logiques</h1>
+
+	
+	<script>
+	     /*
+		    && --> ET
+			|| --> OU
+			!  --> NON
+		  */
+
+		var heure = 15;
+
+		if (heure < 0 || heure > 24) {
+			alert("L'heure est invalide!");
+		} else {
+
+			if (heure >= 0 && heure < 12 == true) {
+				alert("C'est le matin");
+			} else if (heure === 12 == true) {
+				alert("Il est midi pile");
+			} else if (heure > 12 && heure <= 24 == true) {
+				alert("C'est l'apres midi ou le soir");
+
+				if (!(heure <= 16) == true) {
+					alert("Il est plus de 16 heures!");
+				} else {
+					alert("Il est moins de 16 heures!");
+				}
+
+
+			} else {
+				alert("La valeur rentrée ne semble pas valide");
+			}
+
+		}
+
+		
+	</script>
+</body>
+</html>

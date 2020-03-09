@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Valeurs primitives et objets</title>
+</head>
+<body>
+	<h1>Les valeur primitives (objet natifs)</h1>
+
+	<script>
+	     //********* string - boolean
+		/*
+		var primitive = "Je suis une valeur primitive";
+		var type_prim = typeof (primitive);
+
+		var chaine = new String("Je suis un objet");   // Creation d'objet de type String
+
+		var type_chai = typeof (chaine);
+
+		alert("Type de primitive : " + type_prim +
+			"\nType de chaine : " + type_chai);
+
+		*/
+
+		var primitive = "Je suis une valeur primitive";
+		var longueur_prim = primitive.length;
+		var maj_prim = primitive.toUpperCase();
+
+		var chaine = new String("Je suis un objet"); 
+		var maj_chai = chaine.toUpperCase();
+
+		alert("Longueur de primitive : " + longueur_prim +
+			"\nPrimitive en majuscule : " + maj_prim +
+			"\nChaine en majuscule : " + maj_chai);
+
+	</script>
+</body>
+</html>
