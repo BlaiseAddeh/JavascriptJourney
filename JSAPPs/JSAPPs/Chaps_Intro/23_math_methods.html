@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>L'objet Math et ses méthodes</h1>
+
+
+	<script>
+	// L'objet Math n'a pas de constructeur
+		/** random() ---> renvoie un nbre aleatoire entre 0 et 1 */
+	   /*
+		var x = Math.random();
+		var y = Math.random();
+
+		alert("Contenu de x :" + x +
+			"\nContenu de y :" + y);
+		*/
+
+		// Pour avoir un nbre aleatoire entre 0 et 1000
+
+		/*
+		var x = Math.random()*1000;
+		var y = Math.random()*1000;
+
+		alert("Contenu de x :" + x +
+			"\nContenu de y :" + y);
+
+        */
+
+		//********** Pour avoir des entiers aleatoire entre 0 et 1000
+		/*
+		var x = Math.round(Math.random()*1000);
+		var y = Math.round(Math.random()*1000);
+
+		alert("Contenu de x :" + x +
+			"\nContenu de y :" + y);
+
+		*/
+
+		//********** arrondi par valeur inferieur et superieur
+
+		/*
+		var x = Math.random() * 1000;
+		var inf = Math.floor(x);
+		var sup = Math.ceil(x);
+
+		alert("Contenu de x : " + x +
+			"\nContenu arrondi < de x : " + inf +
+			"\nContenu arrondi > de x : " + sup);
+
+		*/
+
+		//**** min() et max()
+		/*
+		var min = Math.min(0, -10, 200, 75, 80.4, 25);
+		var max = Math.max(0, -10, 200, 75, 80.4, 25);
+
+		alert("Le plus petit Nbre est :" + min +
+			"\nLe plus grand Nbre est :" + max);
+	    */
+
+	   //******* abs()
+	   /*
+		var x = 2;
+		var y = -10;
+		var absx = Math.abs(x);
+		var absy = Math.abs(y);
+
+		alert("Valeur absolu de x = "+x+" est :" + absx +
+			"\nValeur absolu de y = "+y+" est : " + absy);
+
+		*/
+		var x = 5, y = 3, z = 90;
+
+		var power = Math.pow(x, y);
+		var rac = Math.sqrt(x);
+		var cos = Math.cos(z);
+		var sin = Math.sin(z);
+		var pi = Math.PI;
+		alert("Resultat de pow() : " + power +
+			"\nRacine de  5 : " + rac +
+			"\nCosinus de  0,5 : " + cos +
+			"\nSinus de  0,5 : " + sin +
+			"\nApproximation de pi : " + pi);
+
+
+	</script>
+</body>
+</html>

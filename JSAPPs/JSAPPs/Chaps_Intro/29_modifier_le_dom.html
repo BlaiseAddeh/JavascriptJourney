@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MODIFICATION DU DOM</title>
+</head>
+<body>
+
+	<h1 id="gros_titre">Modification des elements du DOM</h1>
+	<p class="para">Premier paragraphe pour illustration et <a href="http://www.france24.com">france24</a>!</p>
+	<p class="para">Du texte et <a href="http://www.google.com">un lien</a></p>
+	<script>
+		/*
+			var titre = document.getElementById("gros_titre").textContent;
+			var textePara = document.querySelector(".para").textContent;
+
+			alert("Contenu du titre : " + titre +
+				"\nContenu du 1er paragraphe :" + textePara);
+		*/
+
+		//*** Modifier directement le contenu du titre
+		/*
+		 * document.getElementById("gros_titre").innerHTML = "TITRE MODIFIE!"
+		 */
+
+		 //*** Ajouter du contenu au HTML
+		 //document.getElementById("gros_titre").innerHTML += " et contenu ajouté"
+
+		 //*** Ajouter une balise a du contenu au HTML
+		 // document.getElementById("gros_titre").innerHTML += "<mark> et contenu ajouté </mark>"
+
+		 //*** Modifier la valeur d'un attribut HTML
+
+		// document.querySelector("a").href = "http://wikipedia.org"; // modifie l'attribut href du premier lien
+
+		// document.querySelector(".para").className = "para1"; // modifie la classe du premier p
+
+		 //*** Modifier le style d'un HTML
+		 // Pour les attributs Css composés de deux mots separé d'un tiret, on supprime le tiret et la seconde partie du mot est en majuscule.
+		/*
+		document.getElementById("gros_titre").style.color = "orange";
+		document.getElementById("gros_titre").style.fontSize = "40px";
+		*/
+
+
+
+	</script>
+</body>
+</html>

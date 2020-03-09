@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Les closures en Javascript</h1>
+	<script>
+		function compteur() {
+			var i = 0;
+			return function () {
+				return i++;
+			}
+		}
+
+		var plusUn = compteur();
+
+		var autreInstance = compteur();
+
+		alert('Premier tour : ' + plusUn() +
+			'\nDeuxieme tour : ' + plusUn() +
+			'\nPremier tour autreInstance : ' + autreInstance() +
+			'\nTroisieme tour : ' + plusUn() +
+			'\nQuatrieme tour : ' + plusUn() +
+			'\nDeuxieme tour autreInstance : ' + autreInstance() +
+			'\nCinqieme tour : ' + plusUn() +
+			'\nTroisieme tour autreInstance : ' + autreInstance());
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Les methodes de l'objet date</h1>
+
+	<script>
+	      //******** les getter pour recupere la valeur des dates
+		var d = new Date();
+		// getTime() recupere le nbre de milliseconde depuis le 01/01/1979
+		/*
+		var dms = d.getTime();
+		var dy = d.getFullYear();
+		var dmo = d.getMonth() + 1;
+		var ddate = d.getDate();
+		var dday = d.getDay();
+		var dh = d.getHours();   // heure entre 0 et 23
+		var dmin = d.getMinutes();
+		var ds = d.getSeconds();
+		var dMs = d.getMilliseconds();
+
+		alert("Nous sommes le  : " + ddate + '/' + dmo + '/' + dy +
+			'\nIl est actuellement :' + dh + ':' + dmin + ':' + ds + ':' + dMs);
+		*/
+
+	    //******les setter pour definir la valeur des objets de type dates
+		/*
+		d.setFullYear(2015, 5, 15);    // Mon 15 Jun 12:30:15
+		d.setHours(12);
+		d.setMinutes(30);
+		d.setSeconds(15);
+
+		alert('Date definie : ' + d);
+		*/
+
+		//********** Formatage de date
+
+		var dy = d.getFullYear();
+		var dmo = d.getMonth() + 1;
+		var ddate = d.getDate();   // renvoie le num du jour entre 1 et la fin du mois
+		var dday = d.getDay();   // renvoie un chiffre entre 0 et 6
+		var dh = d.getHours();   // heure entre 0 et 23
+		var dmin = d.getMinutes();
+		var ds = d.getSeconds();
+
+		var mois = ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet",
+			"Aout", "Septembre", "Octobre", "Novembre", "Decembre"];
+		var jour = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+
+		alert("Le  " + jour[dday] + " " + ddate + " " + mois[dmo] + " " + dy +
+			"\nIl est : " + dh + " h " + dmin + "mn et " + ds + " s");
+
+	</script>
+</body>
+</html>

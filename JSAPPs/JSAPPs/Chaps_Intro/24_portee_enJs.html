@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>La portée en Javascript</h1>
+
+	<script>
+		var y = 8;
+		function locale() {
+			// var x = 5;    // x est locale
+			// alert(x);
+
+			var y = 7;
+			return y;
+		}
+
+		alert('y globale : ' + y +
+			'\ny locale : ' + locale());
+
+	</script>
+</body>
+</html>

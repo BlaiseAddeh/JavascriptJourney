@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Creation et insertion d'élement HTML</h1>
+    <p class="para">Premier paragraphe pour illustration et <a href="http://www.france24.com">france24</a>!</p>
+    <p class="para">Du texte et <a href="http://www.google.com">un lien</a></p>
+
+	<script>
+        //*********** createElement()     pour la creation d'elt
+		/*
+		var newPara = document.createElement("p");   // Creation d'un paragraphe p
+		newPara.id = "nouveau";  // Definition de l'id du paragraphe
+		var texte = document.createTextNode("Texte a inserrer");  // Creation du noeud texte
+		newPara.appendChild(texte); // Ajout du noeud texte commen enfant du paragraphe
+		document.body.appendChild(newPara);   // Ajouter comme dernier enfant du body
+
+		*/
+
+		/***
+		 * appendChild inserre les elts à la fin de l'objet parent
+		 * pour palier à cette insuffisance, on utilise insertBefore(x,p) : 
+		  * x ---> objet a inserrer et 
+		  * p---> objet avant lequel l'insertion doit se faire
+		***/
+
+		// Pour inserrer le nouveau paragraphe juste avant le 1er paragraphe
+
+		var newPara = document.createElement("p");  
+		newPara.id = "nouveau";  
+		var texte = document.createTextNode("Texte a inserrer");  
+		newPara.appendChild(texte); 
+
+		var para1 = document.querySelector(".para");
+
+		document.body.insertBefore(newPara, para1);
+
+    </script>
+
+</body>
+</html>

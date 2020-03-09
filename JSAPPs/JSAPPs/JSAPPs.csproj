@@ -81,7 +81,16 @@
     <Content Include="Chaps_Intro\1_intro.html" />
     <Content Include="Chaps_Intro\20_ArrayMethodes.html" />
     <Content Include="Chaps_Intro\21_dateObject.html" />
+    <Content Include="Chaps_Intro\22_date_methods.html" />
+    <Content Include="Chaps_Intro\23_math_methods.html" />
+    <Content Include="Chaps_Intro\24_portee_enJs.html" />
+    <Content Include="Chaps_Intro\25_fonctionsAnonymes.html" />
+    <Content Include="Chaps_Intro\26_fonction_autoinvoquee.html" />
+    <Content Include="Chaps_Intro\27_closure.html" />
+    <Content Include="Chaps_Intro\28_dom_manipulation.html" />
+    <Content Include="Chaps_Intro\29_modifier_le_dom.html" />
     <Content Include="Chaps_Intro\2_syntaxeJs.html" />
+    <Content Include="Chaps_Intro\30_creation_modification_elt.html" />
     <Content Include="Chaps_Intro\3_typevaleur_variables.html" />
     <Content Include="Chaps_Intro\4_operations_variables.html" />
     <Content Include="Chaps_Intro\5_concatenation_variables.html" />

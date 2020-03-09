@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gestion du DOM</title>
+</head>
+<body>
+	<h1 id="gros_titre">Manipulation du DOM</h1>
+	<p class="para">Premier paragraphe pour illustration et <a href="http://www.france24.com">france24</a>!</p>
+	<p class="para">Du texte et <a href="http://www.google.com">un lien</a></p>
+
+	<script>
+
+		/********	LES METHODES PERMETTANT L'ACCES AUX ELEMENTS ***********/
+
+		//**** getElementById()
+		/*
+		var titre = document.getElementById("gros_titre");
+		alert(titre);
+		*/
+
+		//****** getElementsByTagName();
+		/*
+		var tableau = document.getElementsByTagName('p');
+		alert("Notre page contient " + tableau.length + " paragraphes")
+		*/
+
+		//****** getElementsByClassName();
+		/*
+		var tableau = document.getElementsByClassName("para");
+		alert("Notre page contient " + tableau.length + " paragraphe(s) de classe='para'");
+		*/
+
+		//****** querySelector();  et  querySelectorAll();
+		/*
+		var lien = document.querySelector("p a")   // retrouve le 1er lien retrouvé dans un paragraphe
+
+		var p = document.querySelectorAll(".para") //Cible tous les elts avec la classe para
+
+		alert("Informations dans lien : " + lien +
+			"\nDans p[0] : " + p[0] +
+			"\nDans p[1] : " + p[1]);
+		*/
+
+		/********	LES METHODES PERMETTANT L'ACCES AU CONTENU DES ELEMENTS ***********/
+		//*** innerHTML
+		/*
+		var titre = document.getElementById("gros_titre").innerHTML;
+		alert(titre);
+		*/
+
+		/*
+		var contenu_p = document.querySelector(".para").innerHTML;  // contenu du  1er paragraphe de classe para
+		alert(contenu_p);
+		*/
+
+		//*** textContent
+
+		/*
+		var contenu_p = document.querySelector(".para").innerHTML;
+		var contenu_p2 = document.querySelector(".para").textContent;
+		alert("Contenu recupéré avec innerHTML : " + contenu_p + 
+		"\n\nContenu recupéré avec textContent :" + contenu_p2);
+		*/
+
+		//body - title - links
+
+		var titre_page = document.title;
+		var page = document.body;
+		var lien = document.links
+
+		alert("Contenu de titre_page : " + titre_page +
+			"\nContenu de page :" + page +
+			"\nContenu de lien :" + lien[0]);
+
+
+
+	</script>
+</body>
+</html>
