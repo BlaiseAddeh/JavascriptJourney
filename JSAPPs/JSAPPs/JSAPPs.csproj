@@ -91,7 +91,17 @@
     <Content Include="Chaps_Intro\29_modifier_le_dom.html" />
     <Content Include="Chaps_Intro\2_syntaxeJs.html" />
     <Content Include="Chaps_Intro\30_creation_modification_elt.html" />
+    <Content Include="Chaps_Intro\31_modif_supprimer_elt.html" />
+    <Content Include="Chaps_Intro\32_naviguer_dans_DOM.html" />
+    <Content Include="Chaps_Intro\33_evenements_step1.html" />
+    <Content Include="Chaps_Intro\34_propagation_des_evts.html" />
+    <Content Include="Chaps_Intro\35_objet_event.html" />
+    <Content Include="Chaps_Intro\36_BOM_ObjetWindow.html" />
+    <Content Include="Chaps_Intro\37_Screen_object.html" />
+    <Content Include="Chaps_Intro\38_Navigator_Object.html" />
+    <Content Include="Chaps_Intro\39_Location_Object.html" />
     <Content Include="Chaps_Intro\3_typevaleur_variables.html" />
+    <Content Include="Chaps_Intro\40_history_object.html" />
     <Content Include="Chaps_Intro\4_operations_variables.html" />
     <Content Include="Chaps_Intro\5_concatenation_variables.html" />
     <Content Include="Chaps_Intro\6_conditions.html" />

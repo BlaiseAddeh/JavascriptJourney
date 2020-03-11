@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>L'objet Screen</h1>
+
+	<p></p>
+
+	<script>
+		var hauteur = window.screen.height;
+		var hauteurDispo = screen.availHeight;
+		var reso = screen.pixelDepth;
+		var para = document.querySelector("p");
+
+		para.innerHTML = "Hauteur de l'écran :" + hauteur +
+			"<br>Hauteur disponible : " + hauteurDispo +
+			"<br>Resolution : " + reso + "bits/px";
+	</script>
+</body>
+</html>

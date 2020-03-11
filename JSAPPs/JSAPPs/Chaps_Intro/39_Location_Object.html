@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Location Object</h1>
+	<button id="charger">Charger un nouveau document</button>
+	<button id="recharger">Recharger le document</button>
+	<button id="changer">Remplacer le document</button>
+
+	<p></p>
+
+	<script>
+			// Fournit des informations relatives à l'url de la page
+
+		var para = document.querySelector('p');
+		var charger = document.getElementById("charger");
+		var recharger = document.getElementById("recharger");
+		var changer = document.getElementById("changer");
+
+		charger.addEventListener('click', charge);
+		recharger.addEventListener('click', recharge);
+		changer.addEventListener('click', change);
+
+		function charge() {
+		   location.assign("http://wikipedia.org")
+		}
+
+		function recharge() {
+			location.reload();
+		}
+
+		function change() {
+			location.replace("http://www.youtube.com");
+		}
+
+		var url = location.href;
+		var chemin = location.pathname;
+
+		para.innerHTML = "URL : " + url +
+			"<br>Chemin : " + chemin;
+
+		// assign vs replace
+		// assign donne la possibilité de revenir en arrire
+		// replace impossibilité de revenir en arriere
+
+	</script>
+
+</body>
+</html>

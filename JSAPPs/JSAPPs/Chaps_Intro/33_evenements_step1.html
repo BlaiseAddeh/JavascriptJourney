@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Etude des evenements</h1>
+
+	<!--<p onclick="this.textContent='Merci!'">Cliquez moi! Cliquez moi</p>-->
+	<!--<p onclick="this.textContent='Merci!'">Cliquez moi! Cliquez moi</p>-->
+
+	<p>Cliquez moi! Je suis le premier</p>
+
+	<p>Cliquez moi! Je suis le second</p>
+
+	<script>
+		// Afficher une alerte au click sur un paragraphe
+		//this sert de reference à l'objet de l'evement
+
+		//*** Ancienne methode de declenchement des evenement
+
+		var p1 = document.querySelector('p');   // selection du premier paragraphe
+		/*
+		
+		p1.onclick = function () {
+			this.innerHTML = "<strong>Bravo ! </strong>";
+			this.style.color = "orange";
+		}
+
+		*/
+
+		/*
+		 * Autre methode d'appel
+		  
+		p1.onclick = bravo;
+
+		function bravo() {
+		    this.innerHTML = "<strong>Bravo ! </strong>";
+			this.style.color = "orange";
+		}
+
+		*/
+
+
+		//*** Nouvelle methode de declenchement des evenement
+
+	</script>
+</body>
+</html>

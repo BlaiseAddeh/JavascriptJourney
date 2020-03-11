@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Etude de l'objet Navigator</h1>
+	<p></p>
+
+	<script>
+	   // Donne des informations sur le navigateur de l'utilisateur
+	   // Il faut demander la permission à l'utilisateur avant de capter ces informations
+	   /*
+		var langue = navigator.language;
+		var navigateur = navigator.appName;   //le nom du navigateur
+		var version = navigator.appVersion;
+		var moteur = navigator.product;
+		var cookiA = navigator.cookieEnabled;
+
+		var para = document.querySelector('p');
+		para.innerHTML = "Langue utilisé :" + langue +
+			"<br>Nom du navigateur : " + navigateur +
+			"<br>Version : " + version +
+			"<br>Moteur : " + moteur +
+			"<br>Cookie ? : " + cookiA;
+
+		*/
+
+		//****** La geolocalisation de l'utilisateur
+
+		var para = document.querySelector('p');
+		var loc = navigator.geolocation;
+
+		// fonction auto invoquée
+		(function () {
+			if (loc) { // verifie si on a les variables de localisation
+			     loc.getCurrentPosition(coordonnes)
+			} else {
+				para.innerHTML = "Localisation non disponible";
+			}
+		})();
+
+		function coordonnes(x) {
+			para.innerHTML = "Latitude : " + x.coords.latitude +
+			"<br>Longitude : " + x.coords.longitude;
+		}
+
+	</script>
+</body>
+</html>

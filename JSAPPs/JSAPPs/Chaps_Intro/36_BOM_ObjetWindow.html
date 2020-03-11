@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1 id="gros_titre">Le BOM</h1>
+
+	<p> Cliquez pour ouvrir un nouvel onglet</p>
+
+	<button id="ouvrir">Ouvrir une nouvelle fenetre</button>
+
+	<button id="fermer">Refermer la fenetre</button>
+
+	<button id="modifier">Changer la taille fenetre</button>
+
+	<script>
+			//*******open() -----> Ouvrir un nouvelle onjet
+		/*
+		var para = document.querySelector("p");
+		para.addEventListener('click', fenetre);
+
+		function fenetre() {
+			//_blank   ---> ouvre un nouvel onglet
+			window.open("http://wikipedia.org", '_blank', 'width=500, height=300')
+		}
+
+		*/
+
+			//******* close()    -----> fonction de fermeture de fenetre
+
+		/*
+		var ouvrir = document.getElementById("ouvrir");
+		var fermer = document.getElementById("fermer");
+		var fenetre = "";
+
+		ouvrir.addEventListener("click", fOuvrir);
+		fermer.addEventListener("click", fFermer);
+
+		function fOuvrir() {
+			fenetre = window.open("http://wikipedia.org", '_blank', 'width=500');
+		}
+
+		function fFermer() {
+			fenetre.close();
+		}
+		*/
+
+		//***** resizeTo() ----------> redimensionner
+
+		var ouvrir = document.getElementById("ouvrir");
+		var fermer = document.getElementById("fermer");
+		var modifier = document.getElementById("modifier");
+		var fenetre = "";
+
+		ouvrir.addEventListener("click", fOuvrir);
+		fermer.addEventListener("click", fFermer);
+		modifier.addEventListener("click", fModifier);
+
+		function fOuvrir() {
+			fenetre = window.open("http://wikipedia.org", '_blank', 'width=500');
+		}
+
+		function fFermer() {
+			fenetre.close();
+		}
+
+		function fModifier() {
+			fenetre.resizeTo(300, 300);
+		}
+
+
+
+	</script>
+</body>
+</html>

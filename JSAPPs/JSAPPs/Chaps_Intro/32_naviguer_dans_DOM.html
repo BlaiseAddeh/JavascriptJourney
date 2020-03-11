@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+	<h1 id="gros_titre">Le DOM</h1>
+
+	<div>
+		<p class="para">Du text</p>
+		<p class="para"> Un deuxime <strong>paragraphe</strong></p>
+	</div>
+	<script>
+	    //* nodeValue s'utilise sur les noeud de type texte
+
+		/*
+		var p = document.querySelector(".para");  //accéder au premier paragraphe
+		var div = p.parentNode;                   // selectionner la div parent de p
+		div.style.color = "orange";               // appliquer un style à cette div
+		*/
+
+
+		//****childNodes
+		//childNodes recupere un tableau d'elt (meme les espaces entre balises sont considérés comme des elts ==> entre <div> et <p> on considère qu'il y a un elt);
+
+		/*
+		var b = document.body;
+		var div = b.childNodes[3];  //body---(0)--->h1(1)---(2)----div(3)  
+		var p1 = div.childNodes[1]; //div----(0)--->p(1)
+		var texte = p1.childNodes[0].nodeValue; // car on considere qu'il n'y a pas d'espace au sein d'un elt
+		alert(texte);
+		*/
+
+		//****** firstChild() et lastChild()
+		// Comment accéder au paragraphe2
+
+		/*
+		var p2 = document.querySelectorAll('.para')[1];
+
+		var premier = p2.firstChild;   // Un deuxime
+		var dernier = p2.lastChild;    // <strong>paragraphe</strong>
+		
+
+		var inner1 = premier.nodeValue;
+		// var inner2 = dernier.textContent;
+		var inner2 = dernier.childNodes[0].nodeValue;
+
+		alert("Contenu du premier enfant : " + inner1 +
+			"\nContenu du dernier enfant : " + inner2);
+		*/
+
+		//******
+
+		var titre = document.getElementById("gros_titre");
+		var div = titre.nextSibling.nextSibling;   // Ne pas oublier les espaces
+		div.innerHTML = '<div>div totalement modifié</div>';
+
+    </script>
+</body>
+</html>

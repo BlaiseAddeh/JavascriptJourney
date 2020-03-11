@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1 id="gros_titre">Suppression et modification d'élément</h1>
+    <p class="para">Premier paragraphe pour illustration et <a href="http://www.france24.com">france24</a>!</p>
+    <p class="para">Du texte et <a href="http://www.google.com">un lien</a></p>
+
+	<script>
+        //****** removeChild(xx)  avec xx: elt à supprimer ----> Supprimer un elt
+        /*
+		var titre = document.getElementById('gros_titre');
+		var parent = document.body;
+		parent.removeChild(titre);
+        */
+
+        //******* replaceChild(xx,yy) avec xx: nouvel elt; yy: elt à remplacer
+
+        var titre = document.getElementById('gros_titre');
+		var parent = document.body;
+
+		var nouveauTitre = document.createElement('h2');
+		nouveauTitre.id = "titre_moyen";
+		nouveauTitre.innerHTML = "Titre modifié en Js";
+
+		parent.replaceChild(nouveauTitre, titre);
+
+    </script>
+</body>
+</html>

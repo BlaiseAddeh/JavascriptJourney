@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Etude de l'objet history</h1>
+	<p></p>
+
+	<button id="precedent">Charger la derniere page visitée</button>
+	<button id="suivant">Recharger la page suivante dans l'historique</button>
+	<button id="specifique">3 pages en arriere</button>
+
+	<script>
+		  //history ----> permet de se deplacer dans l'historique du visiteur
+
+		var para = document.querySelector("p");
+		var precedent = document.getElementById("precedent");
+		var suivant = document.getElementById("suivant");
+		var specifique = document.getElementById("specifique");
+
+
+		precedent.addEventListener('click', arriere);
+		suivant.addEventListener('click', avant);
+		specifique.addEventListener('click', spec);
+
+		function arriere() {
+			history.back();
+		}
+
+		function avant() {
+			history.forward();
+		}
+
+		function spec() {
+			history.go(-3);
+		}
+
+
+		var histo = history.length;
+
+		para.innerHTML = "URLs : " + histo;
+
+	</script>
+</body>
+</html>
