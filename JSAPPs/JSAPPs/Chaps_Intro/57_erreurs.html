@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Gestion des erreurs en Javascript</h1>
+
+	<label for="nb">Entrer un nombre entre 1 et 10</label>
+	<input type="number" min="1" max="10" id="nb" name="nombre"/>
+	<button type="button" id="test">Valider</button>
+	<p id="msg"></p>
+
+	<script>
+		var b = document.getElementById("test");
+		b.addEventListener('click', testValeur);
+
+		function testValeur() {
+			var p = document.getElementById("msg");
+			var x = document.getElementById('nb').value;
+			try {
+				if ((isNaN(x)) || (x == '')) {
+					throw "Vous n'avez pas rentré de nombre valide";
+				} else if ((x < 1) || (x > 10)) {
+					throw "Vous êtes en dehors de l'intervalle 1-10";
+				} else {
+					p.innerHTML = "Nombre OK";
+				}
+			} catch (e) {
+				p.innerHTML = e;
+			}
+
+			finally {
+				document.getElementById('nb').value = "";
+			}
+		}
+
+	</script>
+</body>
+</html>

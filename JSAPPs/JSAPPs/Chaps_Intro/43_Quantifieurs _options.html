@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Les Quantifieurs  et options</h1>
+	<!--<p>1, 10, 100</p>-->   <!--Exo1-->
+	<p>On apprend à utiliser les regex en Javascript</p>
+	<p id="reg"></p>
+	<script>
+		/*
+		 a?  -----> on veut 0 ou 1 "a"
+		 a+  -----> on veut au moins un "a"
+		 a*  -----> on veut 0,1 ou plusieurs "a"
+		 ^a  -----> on veut un "a" en debut de chaine
+		 a$  -----> on veut un "a" en fin de chaine
+		 a{X} -----> on veut une séquence de X "a"
+		 a{X,Y} -----> on veut une séquence de X a Y fois "a"
+		 a{X,} -----> on veut une séquence d'au moins X fois "a"
+		 a(?=b) ----> on veut un "a" suivi d'un "b"
+		 a(?!b) ----> on veut un "a" non suivi d'un "b"
+	   */
+
+		//******** le quantifieur +
+		/***Exo1
+		var rec = document.querySelector("p").textContent;
+		var r1 = /10+/g;   // recherche de toutes les sequences où il y a un 1 suivi d'au moins 1 zero et ce de manière globale
+		var res1 = rec.match(r1);
+		var resultat = document.getElementById('reg');
+		resultat.innerHTML = "Resultat : " + res1;
+		*/
+
+		//***Exo2: 
+
+		/*
+
+		var rec = document.querySelector("p").textContent;
+		var r1 = /x+/;    // Savoir si notre paragraphe contient au moins un x
+		var res1 = r1.test(rec);
+
+		var r2 = /e(nd)?/g; //Recherche de soit e ou nd de manière globale
+		var res2 = rec.match(r2);
+
+		var r3 = /e$/i; //Verifier que le paragraphe se termine bien par e ou E
+		var res3 = r3.test(r3);
+		
+		var r4 = /p{2}/;       //Verifier si le paragraphe contient 2 p à la suite
+		var res4 = r4.test(r4);
+
+		// Savoir s'il y a l'expression Java suivi de script dans notre paragraphe
+		var r5 = /Java(?=Script)/i;
+		var res5 = r5.test(rec)
+
+		var resultat = document.getElementById("reg");
+		resultat.innerHTML = "Presence d'un 'x' : " + res1 +
+			"<br>Occurence de 'e' ou 'end' : " + res2 +
+			"<br>Chaine finit par un 'e' ? " + res3 +
+			"<br>Chaine contient-elle deux 'p' à la suite ? " + res4 +
+			"<br>Presence de 'Java' suivi de 'Script' ? " + res5;
+
+        */
+
+		//****Exo3 : Les options : 
+		//i-- > ne tient pas compte de la caste dans le regex
+		//g-- > execute les regex de maniere global
+		//m-- > effectue la recherche sur plusieurs lignes
+
+		var rec = document.querySelector("p").textContent;
+		var rec2 = "Je suis sur \ndeux lignes en Js";
+
+		var r1 = /on/i;        // recherche de toutes les combinaison de o et n
+		var res1 = rec.match(r1);
+
+		var r2 = /e/g;
+		var res2 = rec.match(r2);
+				
+		var r3 = /^d/; // voir si une ligne commence par d sans tenir compte des retours à la ligne
+		var res3 = r3.test(rec2);
+
+		var r4 = /^d/m;          //NB: faire attention à l'espace
+		var res4 = r4.test(rec2);
+
+		var resultat = document.getElementById("reg");
+
+		resultat.innerHTML = "Resultat regex 1 : " + res1 +
+			"<br>Resultat regex 2  : " + res2 +
+			"<br>Resultat regex 3 :  " + res3 +
+			"<br>Resultat regex 4 : " + res4;
+
+
+	</script>
+</body>
+</html>

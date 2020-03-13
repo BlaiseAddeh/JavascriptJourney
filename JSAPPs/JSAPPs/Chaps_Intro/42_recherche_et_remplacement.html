@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Recherche et Remplacement</h1>
+
+	<p>Engagez vous qu'ils disaient, rengagez vous qu'ils disaient !</p>
+	<p id="reg"></p>
+
+	<script>
+	   //******* methode match() -----> rechercher un caratere dans  une sequence de caracteres
+	   /*
+		var expr = document.querySelector("p");
+		var r1 = /engagez/i;
+		var r2 = /engagez/ig;    //g---> recherche globale
+
+		var res1 = expr.textContent.match(r1);
+		var res2 = expr.textContent.match(r2);
+
+		var resultat = document.getElementById("reg");
+		resultat.innerHTML = "Resultat match() sur regex 1 : " + res1 +
+			"<br>Resultat match() sur regex 2 : " + res2;
+		*/
+
+
+		 //******* methode search() -----> retourne la position à laquelle l'objet recherche est trouvé. Retourne -1 quand l'objet recherché n'est pas trouvé.
+		 /*
+		var expr = document.querySelector("p");
+		var r1 = /engagez/i;    //on ignore la caste
+		var r2 = /engagez/;    //on tient compte de la caste
+
+		var res1 = expr.textContent.search(r1);   // 0
+		var res2 = expr.textContent.search(r2);  //31
+
+		var resultat = document.getElementById("reg");
+		resultat.innerHTML = "Resultat search() sur regex 1 : " + res1 +
+			"<br>Resultat search() sur regex 2 : " + res2;
+
+		*/
+
+		//******* methode replace() -----> rechercher une expression et la remplacer par une autre
+		/*
+		var expr = document.querySelector("p");
+		var r1 = /vous/;     // recherche le premier des éléments
+		var r2 = /vous/g;    //recherche global sur tout le paragraphe
+
+		var res1 = expr.textContent.replace(r1, 'moi'); 
+		var res2 = expr.textContent.replace(r2, 'moi');
+
+		var resultat = document.getElementById("reg");
+		resultat.innerHTML = "Resultat replace() sur regex 1 : " + res1 +
+			"<br>Resultat replace() sur regex 2 : " + res2;
+        */
+
+		//******* methode test() renvoie true qd l'expression est trouvé, false qd l'expression n'est pas trouvé.
+
+		/*
+		var rec = document.querySelector("p").textContent;
+		var r1 = /ENGAGEZ/; //la cast doit etre respectée
+		var r2 = /ENGAGEZ/i;   //null besoin de la cast
+
+		var res1 = r1.test(rec);   // false
+		var res2 = r2.test(rec);    // true
+
+		var resultat = document.getElementById("reg");
+		resultat.innerHTML = "Resultat test() sur regex 1 : " + res1 +
+			"<br>Resultat test() sur regex 2 : " + res2;
+
+		*/
+
+		//******* methode exec() ---> retourne la chaine recherchée si elle est trouvé, retourne null dans le cas contraire.
+		// la la sequence recherché se trouve plusieurs fois dans la chaine, elle est retournée une seule fois.
+
+		var rec = document.querySelector("p").textContent;
+		var r1 = /aient/; 
+
+		var res1 = r1.exec(rec);  
+
+		var resultat = document.getElementById("reg");
+		resultat.innerHTML = "Resultat exec() sur regex 1 : " + res1;
+
+	</script>
+
+</body>
+</html>

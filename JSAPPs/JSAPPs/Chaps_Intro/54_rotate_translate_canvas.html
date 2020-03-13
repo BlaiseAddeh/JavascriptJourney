@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #canvas1 {
+            /*background-color:orange;*/
+            border: 2px solid orange;
+        }
+       
+    </style>
+
+</head>
+<body>    
+    
+    <canvas id="canvas1" width="600" height="400"></canvas>
+   
+   <script>
+
+       var canvas = document.getElementById("canvas1");
+	   var contexte = canvas.getContext("2d");
+
+       // la methode rotate doit s'exécuter avant le dessin 
+
+       /*
+	   contexte.fillStyle = "#48A";
+	   contexte.fillRect(150, 25, 75, 75);
+
+	   contexte.rotate(Math.PI/9);     // PI/9 ---> 20 degrés
+	   contexte.fillStyle = 'RGBa(64,192,128,0.6)';
+	   contexte.fillRect(150, 25, 75, 75);
+
+	   contexte.rotate(Math.PI / 9);  // PI/9 ---> 20 degrés % au 2 ème carré
+        contexte.fillStyle = 'RGBa(192,64,192,0.6)';
+	   contexte.fillRect(150, 25, 75, 75);
+
+       */
+
+       //translate()  ---> redefinit le point de reference (depart du dessin)
+       /*
+       contexte.fillStyle = "#48A";
+	   contexte.fillRect(10, 10, 75, 75);
+	   contexte.translate(75, 75);
+
+	   contexte.fillStyle = 'RGB(64,192,128)';
+	   contexte.fillRect(10, 10, 75, 75);
+       */
+
+       // Definit le point de reference au centre du canvas de ldimmension  width="600" height="400"
+	   contexte.translate(300, 200);
+
+       //dessin du 1er carré
+       contexte.fillStyle = "#48A";
+	   contexte.fillRect(0, 0, 75, 75);
+
+	   contexte.rotate(Math.PI / 2);  // rotation de 90%
+
+        //dessin du 2ème carré
+       contexte.fillStyle = 'RGB(64,192,128)';
+	   contexte.fillRect(0, 0, 75, 75);
+
+        contexte.rotate(Math.PI / 2);  // rotation de 90%
+
+         //dessin du 3ème carré
+       contexte.fillStyle = '#A3A';
+	   contexte.fillRect(0, 0, 75, 75);
+
+	   contexte.rotate(Math.PI / 2);  // rotation de 90%
+
+        contexte.fillStyle = '#E85';
+	   contexte.fillRect(0, 0, 75, 75);
+
+   </script>
+</body>
+</html>

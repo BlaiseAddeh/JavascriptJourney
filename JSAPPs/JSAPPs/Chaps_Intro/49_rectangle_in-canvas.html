@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+
+	<style>
+		body{
+			margin:0px;
+			padding:0px;
+		}
+		#canvas1{
+			/*background-color:orange;*/
+			border: 2px solid orange;
+		}
+	</style>
+
+</head>
+<body>
+
+    <canvas id="canvas1" width="400" height="200"></canvas>
+
+    <script>
+		//fillStyle doit tjrs etre placé avant la fonction fillRect
+		/*
+		 //Dessiner un rectangle plein
+
+		var canvas = document.getElementById("canvas1");
+
+		var contexte = canvas.getContext("2d");
+
+		contexte.fillStyle = "#0AA";
+		contexte.fillRect(50, 0, 200, 100);  //50-->retrait gauche, 0--> marginTop, 200--> width, height-->100
+
+		*/
+
+
+		//******* Dessiner un rectangle vide
+		/*
+		var canvas = document.getElementById("canvas1");
+		var contexte = canvas.getContext("2d");
+
+		contexte.lineWidth ='5'
+		contexte.strokeStyle = "#0AA";
+		contexte.strokeRect(50, 10, 150, 80);
+		*/
+
+		//******Dessiner plusieurs rectangles
+
+		var canvas = document.getElementById("canvas1");
+		var contexte = canvas.getContext("2d");
+
+		//Rectangle 1 : bleu, plein, opaque
+		contexte.fillStyle = "#36B";
+		contexte.fillRect(100, 50, 200, 100);  
+
+		//Rectangle 2 : vert, plein, semi-transparent
+		contexte.fillStyle = 'RGBa(50, 200, 100, 0.5)';
+		contexte.fillRect(50, 25, 100, 50);  
+
+		//Rectangle 3 :vide,  bordure violette
+		contexte.lineWidth ='5'
+		contexte.strokeStyle = "#0AA";
+		contexte.strokeRect(250, 125, 100, 50);
+
+    </script>
+
+</body>
+</html>

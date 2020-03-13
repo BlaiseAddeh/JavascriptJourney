@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Les delai d'exécuton</h1>
+	
+	<!--EXO1
+	<p>Horloge actualisée en direct: Il est <span id="temps"></span></p>
+	<button id="stop">Arreter le temps</button>
+	-->
+
+	<!--EXO2-->
+	<button id="btn">Cliquez</button>
+
+	<script>
+
+	     /* Exo1:
+
+	    //****setInterval(une fonction, intervalle d'exécution)
+
+		var heure = document.getElementById("temps");
+		var stop = document.getElementById("stop");
+		var tempsReel = setInterval(horloge, 1000);
+
+		function horloge() {
+			var d = new Date();
+			heure.innerHTML = d.toLocaleTimeString();  //toLocaleTimeString--> l'heure du fuseau horaire
+		}
+
+		//*** clearInterval() --> permet d'arreter une methode passé à setInterval()
+
+		stop.addEventListener('click', arret);
+		function arret() {
+			clearInterval(tempsReel);
+		}
+
+		*/
+
+		//**** setTimeOut() ---> permet d'exécuter une action à partir d'un moment donné
+		//Changer la couleur de fond à intervalle constant
+
+		var body = document.body;
+		var btn = document.getElementById("btn");
+		btn.addEventListener('click', couleur);
+		function couleur() {
+			setTimeout(
+				(function () {    //function auto invoquée
+					body.style.backgroundColor = '#3BA'
+				}), 200
+			);
+
+			setTimeout(
+				(function () {    //function auto invoquée
+					body.style.backgroundColor = '#4AD'
+				}), 400
+			);
+
+			setTimeout(
+				(function () {    //function auto invoquée
+					body.style.backgroundColor = '#59B'
+				}), 600
+			);
+
+			setTimeout(
+				(function () {    //function auto invoquée
+					body.style.backgroundColor = '#66B'
+				}), 800
+			);
+
+			setTimeout(
+				(function () {    //function auto invoquée
+					body.style.backgroundColor = '#63B'
+				}), 1000
+			);
+
+			setTimeout(
+				(function () {    //function auto invoquée
+					body.style.backgroundColor = '#83A'
+				}), 1200
+			);
+
+			setTimeout(
+				(function () {    //function auto invoquée
+					body.style.backgroundColor = '#A3A'
+				}), 1400
+			);
+
+			setTimeout(
+				(function () {    //function auto invoquée
+					body.style.backgroundColor = '#A59'
+				}), 1600
+			);
+
+			setTimeout(
+				(function () {    //function auto invoquée
+					body.style.backgroundColor = '#A77'
+				}), 1800
+			);
+
+			setTimeout(
+				(function () {    //function auto invoquée
+					body.style.backgroundColor = '#995'
+				}), 2000
+			);
+
+
+		}
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #canvas1 {
+            /*background-color:orange;*/
+            border: 2px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas1" width="400" height="200"></canvas>
+
+    <script>
+        var canvas = document.getElementById("canvas1");
+		var contexte = canvas.getContext("2d");
+
+        // Les parametres de la methode createLinearGradient()
+        // debut du degradé % au bord gauche du canvas
+        // debut du degradé % au bord superieur du canvas
+        // emplacement du fin du degradé % au bord gauche du canvas
+        // emplacement du fin du degradé % au bord superieur du canvas
+
+        /*
+		var lineaire = contexte.createLinearGradient(100, 50, 300, 150);
+		lineaire.addColorStop(0, '#4C8');   //Vert
+		lineaire.addColorStop(0.5, '#48C');   //Bleu
+		lineaire.addColorStop(1, '#A4A');   //Violet
+
+        //Creer le rectangle dans lequel mettre  notre degradé
+		contexte.fillStyle = lineaire;
+		contexte.fillRect(100, 50, 200, 100);
+        */
+
+        // Creation de dégradé radial
+          
+		var radial = contexte.createRadialGradient(200, 100, 20, 200, 100, 75);  //20-->Taille de depart du degradé // 75--> Taille du degradé
+        radial.addColorStop(0, '#4C8');   //Vert
+		radial.addColorStop(0.25, '#48C');   //Bleu
+		radial.addColorStop(1, '#A4A');   //Violet
+
+        //Creer un cercle dans lequel mettre  notre degradé
+		contexte.beginPath();
+		contexte.fillStyle = radial;
+		contexte.arc(200, 100, 75, 0, 2 * Math.PI);   //200, 100 --> position du centre % au bord gauche et haut
+		contexte.fill();
+
+
+    </script>
+</body>
+</html>

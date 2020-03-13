@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #canvas1 {
+            /*background-color:orange;*/
+            border: 2px solid orange;
+        }
+
+        #image {
+           display: none;
+        }
+
+    </style>
+
+</head>
+<body>
+	<img id="image" src="shoes1.jpg" alt="chaussur rouge" />
+    <canvas id="canvas1" width="600" height="400"></canvas>
+	<script>
+        
+        var canvas = document.getElementById("canvas1");
+		var contexte = canvas.getContext("2d");
+
+        /*
+
+		contexte.font = "bold 20px Verdana, Arial, serif";
+		contexte.strokeStyle = "#48B";
+		contexte.strokeText('text creux', 25, 100);
+
+
+        contexte.font = "bold 20px Verdana, Arial, serif";
+		contexte.fillStyle = "#48B";
+		contexte.fillText('text plein', 225, 100);   //225, 100 ==> % bord gauche , % bord haut
+
+        */
+
+        //****** Image dans un canvas
+
+        //load ---> attend le chargement cplet
+
+		var image = document.getElementById("image");
+		image.addEventListener('load', affiche);
+		function affiche() {
+			contexte.drawImage(image, 50, 25, 500, 350);
+		}
+
+    </script>
+</body>
+</html>

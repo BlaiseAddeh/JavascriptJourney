@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+	<h1>Validation côté Javascript</h1>
+
+    <form action="/" method="post">
+        <label for="prenom">Entrer votre prenom</label>
+        <input type="text" name="prenom" id="prenom" required="required" maxlength="20" />
+		 <span id="prenom_manquant"></span><br />
+
+        <label for="mail">Entrer votre email</label>
+        <input type="email" name="mail" id="mail" required="required" /><br />
+
+        <label for="tel">Telephone:</label>
+        <input type="tel" name="tel" id="tel" required="required" /><br />
+
+        <input id="bouton_envoi" type="submit" value="Valider" />
+    </form>
+
+	<script>
+     // Verifier que le champ prenom n'est pas vide
+		var validation = document.getElementById('bouton_envoi');
+		var prenom = document.getElementById('prenom');
+		var prenom_m = document.getElementById('prenom_manquant');
+
+		var prenom_v=/^[a-zA-ZéèîïÏÎ][a-zéèàçîï]+([-'\s][a-zA-ZéèîïÏÎ][a-zéèàçîï]+)?/;
+
+		validation.addEventListener('click', f_valid);
+
+		function f_valid(e) {
+			if (prenom.validity.valueMissing) {  //validity.valueMissing retourne true si le champ est vide
+				e.preventDefault();
+				prenom_m.textContent = "Prenom manquant!"
+				prenom_m.style.color = "red";
+			} else if (prenom_v.test(prenom.value)==false) {
+				e.preventDefault();
+				prenom_m.textContent = "Format incorrect";
+				prenom_m.style.color = "orange";
+			} else {
+
+			}
+		}
+
+    </script>
+</body>
+</html>

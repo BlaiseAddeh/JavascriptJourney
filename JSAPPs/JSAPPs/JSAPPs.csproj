@@ -102,12 +102,30 @@
     <Content Include="Chaps_Intro\39_Location_Object.html" />
     <Content Include="Chaps_Intro\3_typevaleur_variables.html" />
     <Content Include="Chaps_Intro\40_history_object.html" />
+    <Content Include="Chaps_Intro\41_regex.html" />
+    <Content Include="Chaps_Intro\42_recherche_et_remplacement.html" />
+    <Content Include="Chaps_Intro\43_Quantifieurs _options.html" />
+    <Content Include="Chaps_Intro\44_classesCaractere_metacaracteres.html" />
+    <Content Include="Chaps_Intro\45_rappel_sur_les_formulaires.html" />
+    <Content Include="Chaps_Intro\46_Validationhtml.html" />
+    <Content Include="Chaps_Intro\47_validation_javascript.html" />
+    <Content Include="Chaps_Intro\48_canvas.html" />
+    <Content Include="Chaps_Intro\49_rectangle_in-canvas.html" />
     <Content Include="Chaps_Intro\4_operations_variables.html" />
+    <Content Include="Chaps_Intro\50_lignes_dans_canvas.html" />
+    <Content Include="Chaps_Intro\51_arc_cercle_canvas.html" />
+    <Content Include="Chaps_Intro\52_degrade_canvas.html" />
+    <Content Include="Chaps_Intro\53_texte_image_canvas.html" />
+    <Content Include="Chaps_Intro\54_rotate_translate_canvas.html" />
+    <Content Include="Chaps_Intro\55_gestion_delai_execution.html" />
+    <Content Include="Chaps_Intro\56_cookies.html" />
+    <Content Include="Chaps_Intro\57_erreurs.html" />
     <Content Include="Chaps_Intro\5_concatenation_variables.html" />
     <Content Include="Chaps_Intro\6_conditions.html" />
     <Content Include="Chaps_Intro\7_condition_ifelse.html" />
     <Content Include="Chaps_Intro\8_operateurs_logiques.html" />
     <Content Include="Chaps_Intro\9_simplifier_cdt.html" />
+    <Content Include="Chaps_Intro\shoes1.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
